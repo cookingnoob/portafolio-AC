@@ -1,5 +1,5 @@
 import React from 'react'
-import NameTitle from '../components/NameTitle'
+
 import { Box, Typography } from '@mui/material'
 import { useTheme } from '@emotion/react'
 
@@ -13,12 +13,12 @@ const Welcome = () => {
       height={'100vh'}
       width={'100vw'}
       bgcolor={'primary.dark'}>
-      <NameTitle />
-      <Typography variant='h1' color={'primary'}>Lorem</Typography>
-      <Typography variant='h1' color={'secondary'}>Lorem</Typography>
-      <Typography variant='h1' color={'secondary'}>Lorem</Typography>
-      <Typography variant='h1' color={'primary'}>Lorem</Typography>
-      <Typography variant='h1' color={'primary'}>Lorem</Typography>
+      <Typography variant='h5' color={'primary'} fontSize={'30px'}>Alan Coste</Typography>
+      <Typography variant='h1' color={'primary'} fontSize={'100px'}></Typography>
+      <Typography variant='h1' color={'secondary'} fontSize={'100px'}></Typography>
+      <Typography variant='h1' color={'secondary'} fontSize={'100px'}></Typography>
+      <Typography variant='h1' color={'primary'} fontSize={'100px'}></Typography>
+      <Typography variant='h1' color={'primary'} fontSize={'100px'}></Typography>
     </Box>
   )
 }

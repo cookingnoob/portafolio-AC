@@ -3,7 +3,7 @@ import React from 'react'
 
 const NameTitle = () => {
   return (
-    <Typography variant='h5' color={'primary'}>Alan Coste</Typography>
+    <Typography variant='h5' color={'primary'} fontSize={'30px'}>Alan Coste</Typography>
   )
 }
 
