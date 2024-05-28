@@ -1,6 +1,7 @@
 import './App.css'
 import About from './pages/About'
 import Welcome from './pages/Welcome'
+import Work from './pages/Work'
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
       {/* <Welcome /> */}
-      <About />
+      {/* <About /> */}
+      <Work />
     </>
   )
 }

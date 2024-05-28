@@ -3,10 +3,8 @@
   src: url('/public/Didot\ Regular.ttf');
   font-weight: normal;
   font-style: normal;
-}
+}*/
 body{
   margin: 0;
-  background: rgba(30, 30, 30, 1);
-  color: rgba(241, 241, 241, 1);
-  font-family: 'Didot';
-} */
+
+} 
