@@ -1,0 +1,11 @@
+@font-face {
+  font-family: Didot;
+  src: url('/Didot\ Regular.ttf');
+}
+
+body{
+  background-color: rgba(30, 30, 30, 1);
+  font-family: Didot;
+  color: rgba(241, 241, 241, 1);
+}
+
