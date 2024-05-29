@@ -11,9 +11,16 @@ describe('render elements from Welcome Page', () => {
     const name = screen.getByRole('heading', { name: /Alan Coste/i })
     expect(name).toBeInTheDocument()
   });
-  test('renders copy titles', () => {
+  test('renders navlinkgs titles', () => {
     render(<Welcome />)
-    const copy = screen.getAllByRole('heading', { name: /Lorem/i })
-    expect(copy.length).toBeGreaterThan(4)
+    const programmingTitle = screen.getByText('PROGRAMMING')
+    const creativeTitle = screen.getByText('CREATIVE')
+    const aboutTitle = screen.getByText('ABOUT')
+    const cvTitle = screen.getByText('CV')
+
+    expect(programmingTitle).toBeInTheDocument()
+    expect(creativeTitle).toBeInTheDocument()
+    expect(aboutTitle).toBeInTheDocument()
+    expect(cvTitle).toBeInTheDocument()
   })
 })

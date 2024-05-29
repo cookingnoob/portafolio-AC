@@ -14,11 +14,10 @@ const Welcome = () => {
       width={'100vw'}
       bgcolor={'primary.dark'}>
       <Typography variant='h5' color={'primary'} fontSize={'30px'}>Alan Coste</Typography>
-      <Typography variant='h1' color={'primary'} fontSize={'100px'}>LOREM</Typography>
-      <Typography variant='h1' color={'secondary'} fontSize={'100px'}>IPSUM</Typography>
-      <Typography variant='h1' color={'secondary'} fontSize={'100px'}>LOREM</Typography>
-      <Typography variant='h1' color={'primary'} fontSize={'100px'}>IPSUM</Typography>
-      <Typography variant='h1' color={'primary'} fontSize={'100px'}>LOREM</Typography>
+      <Typography variant='h1' color={'primary'} fontSize={'100px'}>PROGRAMMING</Typography>
+      <Typography variant='h1' color={'secondary'} fontSize={'100px'}>CREATIVE</Typography>
+      <Typography variant='h1' color={'secondary'} fontSize={'100px'}>ABOUT</Typography>
+      <Typography variant='h1' color={'primary'} fontSize={'100px'}>CV</Typography>
     </Box>
   )
 }

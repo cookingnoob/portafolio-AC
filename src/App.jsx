@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-      {/* <Welcome />
+      <Welcome />
       <About />
-      <Work /> */}
+      <Work />
       <Photography />
     </>
   )
