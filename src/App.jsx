@@ -11,7 +11,7 @@ function App() {
     <>
       <Welcome />
       <About />
-      <Work />
+      {/* <Work /> */}
       <Photography />
     </>
   )
