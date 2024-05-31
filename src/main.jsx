@@ -13,15 +13,7 @@ import Welcome from './pages/Welcome.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <BrowserRouter basename='/'>
-        <Routes>
-          <Route path='/' element={<App />}>
-            <Route path='/home' index element={<Welcome />} />
-            <Route path='creative' element={<Photography />} />
-            <Route path='about' element={<About />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <App />
     </ThemeProvider>
   </React.StrictMode>,
 )

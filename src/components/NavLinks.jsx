@@ -1,10 +1,27 @@
 import { Typography } from '@mui/material'
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const NameTitle = () => {
+const NavLinks = () => {
   return (
-    <Typography variant='h5' color={'primary'} fontSize={'30px'}>Alan Coste</Typography>
+    <>
+      <NavLink>
+        <Typography>Home</Typography>
+      </NavLink>
+      <NavLink>
+        <Typography>Programming</Typography>
+      </NavLink>
+      <NavLink>
+        <Typography>Creative</Typography>
+      </NavLink>
+      <NavLink>
+        <Typography>About</Typography>
+      </NavLink>
+      <NavLink>
+        <Typography>CV</Typography>
+      </NavLink>
+    </>
   )
 }
 
-export default NameTitle
+export default NavLinks

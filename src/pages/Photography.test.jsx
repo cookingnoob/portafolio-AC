@@ -2,18 +2,27 @@ import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, test } from "vitest";
 import Photography from "./Photography";
+import { MemoryRouter } from "react-router-dom";
 
 describe('renders photography page elements', () => {
 
   it('renders photographyTitle', () => {
-    render(<Photography />)
+    render(
+      <MemoryRouter>
+        <Photography />
+      </MemoryRouter>
+    )
     const photographyTitle = screen.getByText('Photography')
     expect(photographyTitle).toBeInTheDocument()
 
   })
 
   it('renders skills', () => {
-    render(<Photography />)
+    render(
+      <MemoryRouter>
+        <Photography />
+      </MemoryRouter>
+    )
     const skillsHeader = screen.getByText('Skills')
     const skillOne = screen.getByText('Skill one')
     const skillTwo = screen.getByText('Skill two')

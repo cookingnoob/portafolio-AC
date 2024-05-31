@@ -1,16 +1,21 @@
-import { Outlet } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import About from './pages/About'
-import Photography from './pages/Photography'
 import Welcome from './pages/Welcome'
-import Work from './pages/Work'
+import Photography from './pages/Photography'
+import About from './pages/About'
 
 function App() {
 
 
   return (
     <>
-      <Outlet />
+      <BrowserRouter basename='/'>
+        <Routes>
+          <Route path='/home' index element={<Welcome />} />
+          <Route path='creative' element={<Photography />} />
+          <Route path='about' element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
