@@ -20,7 +20,7 @@ describe('render elements from About page', () => {
         <About />
       </MemoryRouter>
     )
-    const aboutMe = screen.getByText('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime nisi voluptatibus soluta, repellendus fugiat facilis sequi distinctio commodi recusandae nostrum nam. Autem, odio? Debitis nam iure optio sunt eius?')
+    const aboutMe = screen.getByText('I’m a communicator transitioning to coding. I’m highly driven to solve problems as a team player. Research and critical thinking is how I reach solutions.')
     expect(aboutMe).toBeInTheDocument()
   })
 })

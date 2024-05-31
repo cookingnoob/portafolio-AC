@@ -9,7 +9,7 @@ describe('renders nav elements', () => {
     render(<MemoryRouter>
       <NavLinks />
     </MemoryRouter>)
-    //home, programming, creative, cv, about
+
     const home = screen.getByText(/Home/i)
     const programming = screen.getByText(/Programming/i)
     const creative = screen.getByText(/Creative/i)

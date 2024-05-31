@@ -15,7 +15,7 @@ const About = () => {
         <Typography variant='h6' color={'primary'}>About me</Typography>
       </Box>
       <Box width={'70vw'}>
-        <Typography color={'primary'} fontSize={'30px'}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime nisi voluptatibus soluta, repellendus fugiat facilis sequi distinctio commodi recusandae nostrum nam. Autem, odio? Debitis nam iure optio sunt eius?</Typography>
+        <Typography color={'primary'} fontSize={'30px'}>I’m a communicator transitioning to coding. I’m highly driven to solve problems as a team player. Research and critical thinking is how I reach solutions.</Typography>
       </Box>
     </Box>
   )
