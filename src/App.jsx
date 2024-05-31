@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
 import About from './pages/About'
 import Photography from './pages/Photography'
@@ -9,10 +10,7 @@ function App() {
 
   return (
     <>
-      <Welcome />
-      <About />
-      {/* <Work /> */}
-      <Photography />
+      <Outlet />
     </>
   )
 }
