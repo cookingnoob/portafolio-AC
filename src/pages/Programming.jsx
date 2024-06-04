@@ -12,6 +12,7 @@ const Programming = () => {
       React
       Node y express */}
       <Typography variant='h1' color={'primary'}>React:</Typography>
+
       <Box display={'flex'} flexDirection={'column'} alignItems={'center'} gap={'5px'} justifyContent={'center'}>
         {/* project card */}
         <Box>
@@ -31,6 +32,33 @@ const Programming = () => {
         <Microlink url='https://github.com/cookingnoob/rtc-final-server' media='logo' />
         <Microlink url='https://github.com/cookingnoob/rtc-backend1' media='logo' />
       </Box>
+      <Typography variant='h1' color={'primary'}>HTML5 || CSS</Typography>
+      <Box>
+        <Microlink url='https://github.com/cookingnoob/odin-recipes' />
+        <Microlink url='https://github.com/cookingnoob/admin-dashboard-odin' />
+        <Microlink url='https://github.com/cookingnoob/landing-page-top-flexbox' />
+        <Microlink url=' https://github.com/cookingnoob/web-responsive-rtc' />
+        <Microlink url='  https://github.com/cookingnoob/sign-up-form-odin' />
+
+
+      </Box>
+      <Typography variant='h1' color={'primary'}>Javascript</Typography>
+      <Box>
+        <Microlink url='https://github.com/cookingnoob/rtc-tienda' />
+        <Microlink url='https://github.com/cookingnoob/rtc-vite-portafolio' />
+        <Microlink url='https://github.com/cookingnoob/calculator' />
+        <Microlink url='https://github.com/cookingnoob/etch-a-sketch' />
+        <Microlink url=' https://github.com/cookingnoob/rockpaperscissors' />
+
+
+      </Box>
+      <Typography variant='h1' color={'primary'}>Typescript</Typography>
+      <Box>
+        <Microlink url='https://github.com/cookingnoob/rtc-react-styles-tests-typescript' />
+        <Microlink url='https://github.com/cookingnoob/libraryOdin' />
+        <Microlink url='https://github.com/cookingnoob/calculator' />
+      </Box>
+
     </>
 
   )
