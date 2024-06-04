@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const NavLinks = () => {
+const BarNavLinks = () => {
   return (
     <Box padding={'10px'} display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'flex-end'}>
       <NavLink to={'/home'}>
@@ -24,4 +24,4 @@ const NavLinks = () => {
   )
 }
 
-export default NavLinks
+export default BarNavLinks

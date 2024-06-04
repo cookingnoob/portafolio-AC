@@ -1,7 +1,7 @@
 import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, test } from "vitest";
-import Photography from "./Photography";
+import Photography from "./Creative";
 import { MemoryRouter } from "react-router-dom";
 
 describe('renders photography page elements', () => {

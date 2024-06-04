@@ -5,9 +5,10 @@ import './index.css'
 import { ThemeProvider } from '@emotion/react'
 import { theme } from './theme.js'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Photography from './pages/Photography.jsx'
 import About from './pages/About.jsx'
 import Welcome from './pages/Welcome.jsx'
+import Creative from './pages/Creative.jsx'
+import Programming from './pages/Programming.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,7 +18,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path='/' element={<App />}>
             <Route path='home' element={<Welcome />} />
-            <Route path='creative' element={<Photography />} />
+            <Route path='programming' element={<Programming />} />
+            <Route path='creative' element={<Creative />} />
             <Route path='about' element={<About />} />
             <Route
               path="*"

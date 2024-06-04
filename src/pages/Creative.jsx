@@ -1,14 +1,14 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import NavLinks from '../components/NavLinks'
 
-const Photography = () => {
+
+const Creative = () => {
   return (
     <Box height={'100vh'}
       width={'100vw'}
       bgcolor={'primary.dark'}>
 
-      <Typography variant='h6' color={'primary'} paddingTop={'10px'} paddingLeft={'10px'} fontSize={'35px'}>Photography</Typography>
+      <Typography variant='h6' color={'primary'} paddingTop={'10px'} paddingLeft={'10px'} fontSize={'35px'}>Creative</Typography>
       <Box display={'flex'} alignItems={'center'} justifyContent={'center'} height={'90vh'}>
         <Box width={'40vw'} display={'flex'} flexDirection={'column'} justifyContent={'center'} alignContent={'center'} >
           <Typography paddingLeft={'30px'} variant='h6' color={'primary'}>Skills</Typography>
@@ -31,4 +31,4 @@ const Photography = () => {
   )
 }
 
-export default Photography
+export default Creative

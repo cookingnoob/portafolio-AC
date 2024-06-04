@@ -1,11 +1,22 @@
-/* @font-face {
-  font-family: Didot;
-  src: url('/Didot\ Regular.ttf');
+@font-face {
+  font-family: 'Didot';
+  src: url('/public/Didot\ Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
-body{
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  cursor: pointer;
+  color: #DD4040;
+}
+
+/* body{
   background-color: rgba(30, 30, 30, 1);
   font-family: Didot;
   color: rgba(241, 241, 241, 1);
-}
- */
+} */
+

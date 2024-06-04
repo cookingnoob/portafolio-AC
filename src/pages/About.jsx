@@ -8,14 +8,12 @@ const About = () => {
       flexDirection={'column'}
       justifyContent={'center'}
       alignItems={'center'}
-      height={'100vh'}
-      width={'100vw'}
-      bgcolor={'primary.dark'}>
+      marginTop={'10rem'}>
       <Box display={'flex'} width={'70vw'}>
         <Typography variant='h6' color={'primary'}>About me</Typography>
       </Box>
       <Box width={'70vw'}>
-        <Typography color={'primary'} fontSize={'30px'}>I’m a communicator transitioning to coding. I’m highly driven to solve problems as a team player. Research and critical thinking is how I reach solutions.</Typography>
+        <Typography color={'primary'} fontSize={'35px'}>I’m a communicator transitioning to coding. I’m highly driven to solve problems as a team player. Research and critical thinking is how I reach solutions.</Typography>
       </Box>
     </Box>
   )

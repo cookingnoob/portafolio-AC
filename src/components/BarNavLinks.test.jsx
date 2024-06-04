@@ -2,12 +2,13 @@ import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import { afterEach, describe, expect, it, test } from "vitest";
-import NavLinks from "./NavLinks";
+
+import BarNavLinks from "./BarNavLinks";
 
 describe('renders nav elements', () => {
   it('renders nav elements', () => {
     render(<MemoryRouter>
-      <NavLinks />
+      <BarNavLinks />
     </MemoryRouter>)
 
     const home = screen.getByText(/Home/i)
