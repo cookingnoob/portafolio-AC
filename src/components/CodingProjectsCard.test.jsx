@@ -56,5 +56,13 @@ describe('renders project info', () => {
     const weatherDescription = screen.getByText('A React SPA that fetches information from Open Weather’s API. It displays the current weather and a five-day forecast for the user’s location and five different cities. The background image changes dynamically based on weather data, with images created using Midjourney.')
     expect(weatherDescription).toBeInTheDocument()
   })
-
+  it('renders repo title', () => {
+    render(
+      <MemoryRouter>
+        <CodingProjectsCard />
+      </MemoryRouter>)
+    const aElements = screen.getAllByRole('link')
+    expect(aElements.length).toBeGreaterThan(0)
+    aElements.forEach(a => expect(a).toBeInTheDocument())
+  })
 })
