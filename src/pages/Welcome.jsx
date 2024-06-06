@@ -1,9 +1,10 @@
-import React from 'react'
 
 import { Box, Typography } from '@mui/material'
-import { useTheme } from '@emotion/react'
+
 import { NavLink } from 'react-router-dom'
-import NavLinks from '../components/BarNavLinks'
+import CodingProjectsCard from '../components/CodingProjectsCard'
+
+
 
 const Welcome = () => {
 
@@ -31,7 +32,9 @@ const Welcome = () => {
       <NavLink to={'/cv'}>
         <Typography variant='h1' color={'primary'} fontSize={'100px'}>CV</Typography>
       </NavLink>
+
     </Box>
+
 
   )
 }

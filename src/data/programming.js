@@ -14,7 +14,7 @@ export const programmingExp = [
     repository: 'https://github.com/cookingnoob/rtc-react-styles-tests-typescript'
   },
   {
-    tech: ['React'],
+    tech: ['React', 'react-router-dom'],
     title: 'Board Games: tic-tac-toe, sudoku, hangman',
     description: 'A React SPA where users can play board games like Hangman, Tic Tac Toe, and Sudoku. This project focuses on utilizing custom hooks and clean code practices. It includes a basic user log feature where players can see their chosen names rendered.',
     projectUrl: 'https://rtc-games.netlify.app',
@@ -56,7 +56,7 @@ export const programmingExp = [
     repository: 'https://github.com/cookingnoob/rtc-backend1'
   },
   {
-    tech: 'HTML',
+    tech: ['HTML'],
     title: 'Recipe blog',
     description: 'My first page ever! A simple food blog that renders my three favorite recipes. Images and recipes are mine!',
     projectUrl: 'https://cookingnoob.github.io/odin-recipes/recipes/ribeye.html',
