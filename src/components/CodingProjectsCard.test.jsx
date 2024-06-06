@@ -6,7 +6,6 @@ import CodingProjectsCard from "./CodingProjectsCard";
 
 describe('renders project info', () => {
   it('renders used technologies', () => {
-
     render(
       <MemoryRouter>
         <CodingProjectsCard />
@@ -36,4 +35,26 @@ describe('renders project info', () => {
     expect(typescriptButtons.length).toBeGreaterThan(0)
     typescriptButtons.forEach(b => expect(b).toBeInTheDocument())
   })
+
+  it('renders project title', () => {
+    render(
+      <MemoryRouter>
+        <CodingProjectsCard />
+      </MemoryRouter>)
+
+    const weatherTitle = screen.getByText(/Weather App/i)
+
+    expect(weatherTitle).toBeInTheDocument()
+  })
+
+  it('renders description', () => {
+    render(
+      <MemoryRouter>
+        <CodingProjectsCard />
+      </MemoryRouter>)
+
+    const weatherDescription = screen.getByText('A React SPA that fetches information from Open Weather’s API. It displays the current weather and a five-day forecast for the user’s location and five different cities. The background image changes dynamically based on weather data, with images created using Midjourney.')
+    expect(weatherDescription).toBeInTheDocument()
+  })
+
 })

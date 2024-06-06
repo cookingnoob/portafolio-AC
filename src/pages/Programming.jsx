@@ -5,9 +5,9 @@ import CodingProjectsCard from '../components/CodingProjectsCard'
 
 const Programming = () => {
   return (
-    <>
+    <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
       <CodingProjectsCard />
-    </>
+    </Box>
 
   )
 }

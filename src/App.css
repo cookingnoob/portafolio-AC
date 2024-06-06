@@ -13,7 +13,12 @@ a:hover{
   cursor: pointer;
   color: #DD4040;
 }
-
+.microlink_card
+.microlink_card__content_title,
+.microlink_card__content_description,
+.microlink_card__content_url{
+  display: none;
+}
 /* body{
   background-color: rgba(30, 30, 30, 1);
   font-family: Didot;
