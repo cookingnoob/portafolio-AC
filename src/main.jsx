@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { ThemeProvider } from '@emotion/react'
 import { theme } from './theme.js'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import About from './pages/About.jsx'
 import Welcome from './pages/Welcome.jsx'
 import Creative from './pages/Creative.jsx'
@@ -17,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<App />}>
+            <Route path='/' element={<Navigate to="/home" replace />} />
             <Route path='home' element={<Welcome />} />
             <Route path='programming' element={<Programming />} />
             <Route path='creative' element={<Creative />} />

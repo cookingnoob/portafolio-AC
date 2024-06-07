@@ -19,8 +19,6 @@ const CodingProjectsCard = () => {
 
       <Box sx={codingProjectsContainer(theme)}>
 
-
-
         {projects.map((p, index) => (
           //individual card
           <Box key={`${p}-${index}`} sx={codingProjectCard} >
@@ -29,6 +27,7 @@ const CodingProjectsCard = () => {
             {/* technology stack buttons */}
 
             <TechButtons project={p} setProjects={setProjects} />
+
             <br />
             {/* project description */}
             <Box height={'100px'}>

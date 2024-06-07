@@ -1,9 +1,5 @@
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
+import { Outlet, } from 'react-router-dom'
 import './App.css'
-import Welcome from './pages/Welcome'
-import Photography from './pages/Creative'
-import About from './pages/About'
-import NavLinks from './components/BarNavLinks'
 import { Box } from '@mui/material'
 import BarNavLinks from './components/BarNavLinks'
 
