@@ -1,7 +1,9 @@
 import { ArrowLeft, ArrowRight } from '@mui/icons-material'
 import { Box, Button } from '@mui/material'
-import React, { useState } from 'react'
+import React, { Suspense, lazy, useState } from 'react'
 import { creativeProjects } from '../data/creative'
+
+const LazyImages = lazy(() => import('./LazyImages'))
 
 const PhotoCarousel = () => {
   const [indexNum, setIndexNum] = useState(0)
@@ -20,9 +22,9 @@ const PhotoCarousel = () => {
         <ArrowLeft />
       </Button>
 
-      {/* <img src={`${imageOnModal}`} height={'800px'} onClick={handleClose} style={{ cursor: 'pointer' }} /> */}
-      <h1>{indexNum}</h1>
-      <img src={`${creativeProjects[indexNum].imageUrl}`} width={'1000px'} />
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <LazyImages src={`${creativeProjects[indexNum].imageUrl}`} />
+      </Suspense>
       <Button>
         <ArrowRight onClick={handleRight} />
       </Button>
