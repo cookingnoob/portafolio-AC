@@ -1,8 +1,8 @@
 import React, { lazy } from 'react'
 
-const LazyImages = ({ src }) => {
+const LazyImages = ({ src, sizeImg }) => {
   return (
-    <img src={src} width={'1000px'} />
+    <img src={src} style={sizeImg} />
   )
 }
 

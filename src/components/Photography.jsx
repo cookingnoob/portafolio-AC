@@ -1,10 +1,14 @@
 import { Box, Button, Modal } from '@mui/material'
-import React, { useState } from 'react'
+import React, { Suspense, lazy, useState } from 'react'
 import { TikTokEmbed } from 'react-social-media-embed'
 import { modalStyle } from '../theme';
 import { ArrowLeft, ArrowRight } from '@mui/icons-material';
 import { creativeProjects } from '../data/creative';
 import { Carousel } from 'react-responsive-carousel';
+import PhotoCarousel from './PhotoCarousel';
+
+
+const LazyImages = lazy(() => import('./LazyImages'));
 
 const Photography = ({ photo, index }) => {
   const [open, setOpen] = useState(false);
@@ -19,8 +23,11 @@ const Photography = ({ photo, index }) => {
 
 
   return (
-    <Box display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
-      <img src={`${photo.imageUrl}`} height={'300px'} width={'300px'} onClick={handleOpen} style={{ cursor: 'pointer' }} />
+    <Box display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} height={'300px'} width={'300px'} onClick={handleOpen} style={{ cursor: 'pointer' }} >
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <LazyImages src={`${photo.imageUrl}`} sizeImg={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      </Suspense>
+
       <Button onClick={handleOpen}>{photo.title}</Button>
 
       <Modal
@@ -29,24 +36,8 @@ const Photography = ({ photo, index }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box display={'flex'} width={'100vw'} alignItems={'center'} justifyContent={'center'}>
-
-          <Button onClick={() => setImageOnModal(creativeProjects[index - 1].imageUrl)}>
-            <ArrowLeft />
-          </Button>
-
-          <img src={`${imageOnModal}`} height={'800px'} onClick={handleClose} style={{ cursor: 'pointer' }} />
-
-          <Button>
-            <ArrowRight onClick={(() => {
-              creativeProjects.map((p, i) => console.log(`indice del array: ${i}`))
-              console.log(`indice de la imagen que se le hizo clic ${index}`)
-              const newIndex = index + 1
-              setIndexEmbedded(newIndex)
-              setImageOnModal(creativeProjects[newIndex].imageUrl)
-              console.log(`indice despues de tocar la flecha o sea el actual ${newIndex}`)
-            })} />
-          </Button>
+        <Box>
+          <PhotoCarousel index={index} onClick={handleClose} />
         </Box>
       </Modal>
     </Box>

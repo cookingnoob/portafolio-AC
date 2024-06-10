@@ -19,13 +19,12 @@ const Creative = () => {
       justifyContent={'center'}
       alignItems={'center'}
     >
-      <PhotoCarousel />
-      {/* <Box >
 
+      <Box >
         <Button onClick={() => setDisplayContent('tiktok')}>tiktok</Button>
-        <Button onClick={() => setDisplayContent('cooking')}>Cooking</Button>
         <Button onClick={() => setDisplayContent('photography')}>Photography</Button>
       </Box>
+
       {displayContent !== 'tiktok' ? <></> :
         <Box display={'grid'} gridTemplateColumns={'repeat(3, 1fr)'} gap={'30px'}>
           {reels.map((r, index) => (
@@ -33,7 +32,7 @@ const Creative = () => {
           ))}
         </Box>
       }
-      {displayContent !== 'cooking' ? <></> : <p>cooking</p>}
+
       {displayContent !== 'photography' ?
         <></> :
         <Box display={'grid'} gridTemplateColumns={'repeat(3, 1fr)'} gap={'10px'}>
@@ -41,7 +40,7 @@ const Creative = () => {
             <Photography key={`${p}-${index}`} photo={p} index={index} />
           ))}
         </Box>
-      } */}
+      }
     </Box>
   )
 }
