@@ -43,7 +43,7 @@ export const creativeProjects = [
     imageUrl: 'https://res.cloudinary.com/di6vnxokz/image/upload/v1717779984/portafolio-2024/fotografia%20de%20comieda/mgvmhedfv2qjieeflubt.jpg'
   },
   {
-    title: 'Burger with onion ring and cold beer',
+    title: 'Burger with onion ring',
     description: '',
     skill: '',
     imageUrl: 'https://res.cloudinary.com/di6vnxokz/image/upload/v1717616629/portafolio-2024/fotografia%20de%20comieda/lykwe7eyxuufasivi23q.jpg'
@@ -54,37 +54,7 @@ export const creativeProjects = [
     skill: ['Photography', 'Photoshop', 'Studio Lighting'],
     imageUrl: 'https://res.cloudinary.com/di6vnxokz/image/upload/v1717617435/portafolio-2024/fotografia%20de%20comieda/cdytmpdhwrttsm1d7xdr.jpg'
   },
-  //reels
-  {
-    title: '',
-    description: '',
-    skill: '',
-    imageUrl: ''
-  },
-  {
-    title: '',
-    description: '',
-    skill: '',
-    imageUrl: ''
-  },
-  {
-    title: '',
-    description: '',
-    skill: '',
-    imageUrl: ''
-  },
-  {
-    title: '',
-    description: '',
-    skill: '',
-    imageUrl: ''
-  },
-  {
-    title: '',
-    description: '',
-    skill: '',
-    imageUrl: ''
-  },
+
 ]
 export const reels = [
   {

@@ -3,7 +3,9 @@ import React, { useState } from 'react'
 import Microlink from '@microlink/react'
 import { TikTokEmbed } from 'react-social-media-embed';
 import ReelModal from '../components/ReelModal';
-import { reels } from '../data/creative';
+import { creativeProjects, reels } from '../data/creative';
+import Photography from '../components/Photography';
+import PhotoCarousel from '../components/PhotoCarousel';
 
 const Creative = () => {
 
@@ -17,7 +19,8 @@ const Creative = () => {
       justifyContent={'center'}
       alignItems={'center'}
     >
-      <Box >
+      <PhotoCarousel />
+      {/* <Box >
 
         <Button onClick={() => setDisplayContent('tiktok')}>tiktok</Button>
         <Button onClick={() => setDisplayContent('cooking')}>Cooking</Button>
@@ -26,12 +29,19 @@ const Creative = () => {
       {displayContent !== 'tiktok' ? <></> :
         <Box display={'grid'} gridTemplateColumns={'repeat(3, 1fr)'} gap={'30px'}>
           {reels.map((r, index) => (
-            <ReelModal key={`${r}-${index}`} reel={r} />
+            <ReelModal key={`${r}-${index}`} reel={r} index={index} />
           ))}
         </Box>
       }
       {displayContent !== 'cooking' ? <></> : <p>cooking</p>}
-      {displayContent !== 'photography' ? <></> : <p>photography</p>}
+      {displayContent !== 'photography' ?
+        <></> :
+        <Box display={'grid'} gridTemplateColumns={'repeat(3, 1fr)'} gap={'10px'}>
+          {creativeProjects.map((p, index) => (
+            <Photography key={`${p}-${index}`} photo={p} index={index} />
+          ))}
+        </Box>
+      } */}
     </Box>
   )
 }
