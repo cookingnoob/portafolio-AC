@@ -34,7 +34,7 @@ const CodingProjectsCard = () => {
               <Typography variant='parragraph' color={'primary.dark'} fontSize={'12px'}>{p.description}</Typography>
             </Box>
             {/* project site  */}
-            <Microlink url={p.projectUrl} lazy={{ threshold: 0.5 }} fetchData />
+            <Microlink url={p.projectUrl} lazy={{ threshold: 1 }} fetchData />
             {/* github repo */}
             <Box display={'flex'} >
               <Typography color={'primary.dark'}>Repo:</Typography>
