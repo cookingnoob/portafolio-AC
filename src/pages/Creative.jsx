@@ -6,6 +6,7 @@ import ReelModal from '../components/ReelModal';
 import { creativeProjects, reels } from '../data/creative';
 import Photography from '../components/Photography';
 import PhotoCarousel from '../components/PhotoCarousel';
+import { codingProjectsContainer, theme } from '../theme';
 
 const Creative = () => {
 
@@ -26,7 +27,7 @@ const Creative = () => {
       </Box>
 
       {displayContent !== 'tiktok' ? <></> :
-        <Box display={'grid'} gridTemplateColumns={'repeat(3, 1fr)'} gap={'30px'}>
+        <Box sx={codingProjectsContainer(theme)}>
           {reels.map((r, index) => (
             <ReelModal key={`${r}-${index}`} reel={r} index={index} />
           ))}
@@ -35,12 +36,13 @@ const Creative = () => {
 
       {displayContent !== 'photography' ?
         <></> :
-        <Box display={'grid'} gridTemplateColumns={'repeat(3, 1fr)'} gap={'10px'}>
+        <Box sx={codingProjectsContainer(theme)}>
           {creativeProjects.map((p, index) => (
             <Photography key={`${p}-${index}`} photo={p} index={index} />
           ))}
         </Box>
       }
+
     </Box>
   )
 }

@@ -14,7 +14,7 @@ const ReelModal = ({ reel, index }) => {
 
   return (
     <Box display={'flex'} flexDirection={'column'}>
-      <img src={`${reel.coverImg}`} height={'400px'} onClick={handleOpen} style={{ cursor: 'pointer' }} />
+      <img src={`${reel.coverImg}`} onClick={handleOpen} style={{ cursor: 'pointer' }} />
       <Button onClick={handleOpen}>{reel.title}</Button>
 
       <Modal

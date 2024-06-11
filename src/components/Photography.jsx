@@ -1,7 +1,7 @@
 import { Box, Button, Modal } from '@mui/material'
 import React, { Suspense, lazy, useState } from 'react'
 import { TikTokEmbed } from 'react-social-media-embed'
-import { modalStyle } from '../theme';
+import { codingProjectsContainer, modalStyle } from '../theme';
 import { ArrowLeft, ArrowRight } from '@mui/icons-material';
 import { creativeProjects } from '../data/creative';
 import { Carousel } from 'react-responsive-carousel';
