@@ -1,4 +1,5 @@
-import { createTheme } from "@mui/material";
+import { Typography, createTheme, styled } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 export const theme = createTheme({
   palette: {
@@ -54,3 +55,40 @@ export const modalStyle = {
   boxShadow: 24,
   p: 4,
 };
+
+export const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+  color: #F1F1F1;
+  &:hover {
+    animation: colorChange 1s forwards;
+  }
+  @keyframes colorChange {
+    from {
+      color: #F1F1F1;
+    }
+    to {
+      color: #DD4040; /* Cambia este color por el que desees */
+    }
+  }
+`;
+
+export const StyledTypography = styled(Typography)`
+  font-size: 100px;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #F1F1F1 50%, #DD4040 50%);
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  &:hover::after {
+    left: 100%;
+  }
+`;

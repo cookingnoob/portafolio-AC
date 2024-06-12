@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material'
 
 import { NavLink } from 'react-router-dom'
 import CodingProjectsCard from '../components/CodingProjectsCard'
+import { StyledNavLink, StyledTypography } from '../theme'
 
 
 
@@ -17,21 +18,21 @@ const Welcome = () => {
 
       <Typography variant='h5' color={'primary'} fontSize={'30px'}>Alan Coste</Typography>
 
-      <NavLink to={'/programming'}>
-        <Typography variant='h1' color={'primary'} fontSize={'100px'}>PROGRAMMING</Typography>
-      </NavLink>
+      <StyledNavLink to={'/programming'} color='primary'>
+        <StyledTypography variant='h1' fontSize={'100px'}>PROGRAMMING</StyledTypography>
+      </StyledNavLink>
 
-      <NavLink to='/creative'>
-        <Typography variant='h1' color={'secondary'} fontSize={'100px'}>CREATIVE</Typography>
-      </NavLink>
+      <StyledNavLink to='/creative'>
+        <StyledTypography variant='h1' fontSize={'100px'}>CREATIVE</StyledTypography>
+      </StyledNavLink>
 
-      <NavLink to='/about'>
-        <Typography variant='h1' color={'secondary'} fontSize={'100px'}>ABOUT</Typography>
-      </NavLink>
+      <StyledNavLink to='/about'>
+        <StyledTypography variant='h1' fontSize={'100px'}>ABOUT</StyledTypography>
+      </StyledNavLink>
 
-      <NavLink to={'/cv'}>
-        <Typography variant='h1' color={'primary'} fontSize={'100px'}>CV</Typography>
-      </NavLink>
+      <StyledNavLink to={'/cv'}>
+        <StyledTypography variant='h1' fontSize={'100px'}>CV</StyledTypography>
+      </StyledNavLink>
 
     </Box>
 
