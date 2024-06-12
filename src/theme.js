@@ -73,7 +73,7 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const StyledTypography = styled(Typography)`
-  font-size: 100px;
+
   color: inherit;
   position: relative;
   overflow: hidden;
