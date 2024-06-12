@@ -9,6 +9,7 @@ import About from './pages/About.jsx'
 import Welcome from './pages/Welcome.jsx'
 import Creative from './pages/Creative.jsx'
 import Programming from './pages/Programming.jsx'
+import CV from './pages/CV.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path='programming' element={<Programming />} />
             <Route path='creative' element={<Creative />} />
             <Route path='about' element={<About />} />
+            <Route path='cv' element={<CV />} />
             <Route
               path="*"
               element={
