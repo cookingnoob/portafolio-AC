@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight } from '@mui/icons-material'
 import { Box, Button } from '@mui/material'
 import React, { Suspense, lazy, useEffect, useState } from 'react'
-import { creativeProjects } from '../data/creative'
+import { creativeProjects } from '../../data/creative'
 
 const LazyImages = lazy(() => import('./LazyImages'))
 
@@ -27,21 +27,22 @@ const PhotoCarousel = ({ index }) => {
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
   }, [indexNum])
-  return (
-    <Box display={'flex'} width={'100vw'} height={'100vh'} alignItems={'center'} justifyContent={'center'}>
 
+  return (
+    <>
       <Button onClick={handleLeft} >
         <ArrowLeft />
       </Button>
-      <Box >
+      <Box height={'80vh'} width={'90vw'} >
         <Suspense fallback={<h1>Loading...</h1>}>
-          <LazyImages src={`${creativeProjects[indexNum].imageUrl}`} sizeImg={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <LazyImages src={`${creativeProjects[indexNum].imageUrl}`} sizeImg={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </Suspense>
       </Box>
       <Button>
         <ArrowRight onClick={handleRight} />
       </Button>
-    </Box>
+    </>
+
   )
 }
 

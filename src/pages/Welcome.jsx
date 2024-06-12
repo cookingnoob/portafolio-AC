@@ -18,7 +18,7 @@ const Welcome = () => {
 
       <Typography variant='h5' color={'primary'} fontSize={'30px'}>Alan Coste</Typography>
 
-      <StyledNavLink to={'/programming'} color='primary'>
+      <StyledNavLink to={'/programming'} >
         <StyledTypography variant='h1' fontSize={'100px'}>PROGRAMMING</StyledTypography>
       </StyledNavLink>
 

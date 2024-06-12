@@ -2,12 +2,12 @@ import { Box, Button } from '@mui/material'
 import { useState } from 'react'
 import ReelModal from '../components/ReelModal';
 import { creativeProjects, reels } from '../data/creative';
-import Photography from '../components/Photography';
+import Photography from '../components/Photography/Photography';
 import { codingProjectsContainer, theme } from '../theme';
 
 const Creative = () => {
 
-  const [displayContent, setDisplayContent] = useState(null)
+  const [displayContent, setDisplayContent] = useState('photography')
 
   return (
     <Box
