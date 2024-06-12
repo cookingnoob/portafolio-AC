@@ -1,11 +1,8 @@
-import { Box, Button, Typography } from '@mui/material'
-import React, { useState } from 'react'
-import Microlink from '@microlink/react'
-import { TikTokEmbed } from 'react-social-media-embed';
+import { Box, Button } from '@mui/material'
+import { useState } from 'react'
 import ReelModal from '../components/ReelModal';
 import { creativeProjects, reels } from '../data/creative';
 import Photography from '../components/Photography';
-import PhotoCarousel from '../components/PhotoCarousel';
 import { codingProjectsContainer, theme } from '../theme';
 
 const Creative = () => {
