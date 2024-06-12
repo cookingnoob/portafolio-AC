@@ -23,12 +23,12 @@ export const education = [
     institution: 'thepowerbusinessschool',
     time: '2020-2021'
   },
-  {
-    title: 'Powermarketer',
-    description: 'Online program that explored deeply the costumer journey and digital marketing tactics',
-    institution: 'thepowerbusinessschool',
-    time: '2020-2021'
-  },
+  // {
+  //   title: 'Powermarketer',
+  //   description: 'Online program that explored deeply the costumer journey and digital marketing tactics',
+  //   institution: 'thepowerbusinessschool',
+  //   time: '2020-2021'
+  // },
 ]
 
 export const jobExperience = [
