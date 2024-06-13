@@ -125,3 +125,71 @@ export const photoCard = {
   height: '400px',
   width: '400px',
 }
+export const aboutContainer = (theme) => ({
+  display: 'flex',
+  flexDirection: 'row',
+  backgroundColor: theme.palette.primary.dark,
+  color: theme.palette.primary.main,
+  padding: '20px',
+  [theme.breakpoints.down('md')]: {
+    flexDirection: 'column',
+    padding: '10px',
+  },
+});
+
+export const aboutTextContainer = (theme) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginLeft: '10px',
+  width: '70%',
+  [theme.breakpoints.down('md')]: {
+    marginLeft: '0',
+    marginBottom: '20px',
+    width: '100%',
+  },
+});
+
+export const aboutTextBox = () => ({
+  display: 'flex',
+  width: '100%',
+});
+
+export const aboutText = (theme) => ({
+  color: theme.palette.primary.main,
+  fontSize: '25px',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '20px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '18px',
+  },
+});
+
+export const aboutButton = (theme) => ({
+  color: theme.palette.primary.main,
+});
+
+
+export const aboutImageContainer = (theme) => ({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '30%',
+  [theme.breakpoints.down('md')]: {
+    width: '100%',
+    height: 'auto',
+    marginBottom: '20px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '100%',
+    height: 'auto',
+    img: {
+      height: 'auto',
+      maxHeight: '300px',
+      width: '100%',
+      objectFit: 'contain',
+    },
+  },
+});
