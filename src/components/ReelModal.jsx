@@ -1,10 +1,11 @@
-import { Box, Button, Modal, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import { Box, Button, CircularProgress, Modal, Typography } from '@mui/material'
+import React, { Suspense, lazy, useState } from 'react'
 import { TikTokEmbed } from 'react-social-media-embed';
 import { modalStyle } from '../theme';
 import { ArrowLeft } from '@mui/icons-material';
 import { reels } from '../data/creative';
-import LazyImages from './Photography/LazyImages';
+const LazyImages = lazy(() => import('./Photography/LazyImages'));
+
 
 const ReelModal = ({ reel, index }) => {
 
@@ -16,7 +17,9 @@ const ReelModal = ({ reel, index }) => {
   return (
     <Box display={'flex'} flexDirection={'column'}>
       <Box onClick={handleOpen} style={{ cursor: 'pointer' }} height={'600px'} width={'400px'}>
-        <LazyImages src={`${reel.coverImg}`} sizeImg={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <Suspense fallback={<CircularProgress sx={{ margin: 'auto' }} />}>
+          <LazyImages src={`${reel.coverImg}`} sizeImg={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        </Suspense>
       </Box>
 
       <Button onClick={handleOpen}>{reel.title}</Button>
@@ -29,7 +32,7 @@ const ReelModal = ({ reel, index }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={modalStyle} display={'flex'} alignItems={'center'} justifyContent={'center'} height={'600px'}>
-          <TikTokEmbed url={reel.reelUrl} width={325} height={'600px'} />
+          <TikTokEmbed url={reel.reelUrl} width={'325px'} height={'600px'} />
         </Box>
       </Modal>
 

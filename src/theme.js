@@ -36,9 +36,9 @@ export const codingProjectCard = (theme) => ({
 
 export const codingProjectsContainer = (theme) => ({
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+  gridTemplateColumns: 'repeat(3, minmax(200px, 1fr))',
   height: '80vh',
-  width: '70vw',
+  width: '100vw',
   overflowY: 'scroll',
   gap: '10px',
   padding: '5px',

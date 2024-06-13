@@ -17,7 +17,7 @@ const Photography = ({ photo, index }) => {
     <Box>
       <Box style={{ cursor: 'pointer' }} onClick={handleOpen} sx={photoCard}>
 
-        <Box height={'350px'} width={'350px'}>
+        <Box height={'300px'} width={'300px'}>
           <Suspense fallback={<CircularProgress />}>
             <LazyImages src={`${photo.imageUrl}`} sizeImg={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </Suspense>
