@@ -6,8 +6,8 @@ import { codingProjectCard, codingProjectsContainer } from '../theme'
 import TechButtons from './TechButtons'
 
 
-const CodingProjectsCard = () => {
-  const [projects, setProjects] = useState(programmingExp)
+const CodingProjectsCard = ({ projects, setProjects }) => {
+
   const theme = useTheme()
 
 
@@ -15,7 +15,7 @@ const CodingProjectsCard = () => {
   return (
     //all cards container
     <>
-      {projects.length !== programmingExp.length ? <><Button onClick={() => setProjects(programmingExp)}>All Projects</Button> <br /> </> : <></>}
+
 
       <Box sx={codingProjectsContainer(theme)}>
 
