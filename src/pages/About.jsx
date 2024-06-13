@@ -15,7 +15,7 @@ const About = () => {
         <Box sx={aboutTextBox(theme)}>
           {more ? (
             <>
-              <Box display={'flex'} flexDirection={'column'}>
+              <Box display={'flex'} flexDirection={'column'} marginBottom={'80px'}>
                 <Typography sx={aboutText(theme)}>
                   My name is Alan Coste, I have a Bachelor’s degree on Communications. I developed valuable skills such as researching and verification of information, understanding who is the audience and tailor a message for their needs without sacrificing the integrity of the concept.
                   <br />

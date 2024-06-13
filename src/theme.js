@@ -131,6 +131,7 @@ export const aboutContainer = (theme) => ({
   backgroundColor: theme.palette.primary.dark,
   color: theme.palette.primary.main,
   padding: '20px',
+
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
     padding: '10px',
@@ -142,8 +143,8 @@ export const aboutTextContainer = (theme) => ({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  marginLeft: '10px',
-  width: '70%',
+  width: '60vw',
+  gap: '10px',
   [theme.breakpoints.down('md')]: {
     marginLeft: '0',
     marginBottom: '20px',
@@ -153,12 +154,12 @@ export const aboutTextContainer = (theme) => ({
 
 export const aboutTextBox = () => ({
   display: 'flex',
-  width: '100%',
+  width: '60vw',
 });
 
 export const aboutText = (theme) => ({
   color: theme.palette.primary.main,
-  fontSize: '25px',
+  fontSize: '20px',
   [theme.breakpoints.down('md')]: {
     fontSize: '20px',
   },
@@ -176,11 +177,22 @@ export const aboutImageContainer = (theme) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  width: '30%',
+  width: '50vw',
+  img: {
+    maxHeight: '500px',
+    width: '100%',
+    objectFit: 'contain',
+  },
   [theme.breakpoints.down('md')]: {
     width: '100%',
     height: 'auto',
     marginBottom: '20px',
+    img: {
+      height: 'auto',
+      maxHeight: '400px',
+      width: '100%',
+      objectFit: 'contain',
+    },
   },
   [theme.breakpoints.down('sm')]: {
     width: '100%',
