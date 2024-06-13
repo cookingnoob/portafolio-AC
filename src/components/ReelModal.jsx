@@ -4,6 +4,7 @@ import { TikTokEmbed } from 'react-social-media-embed';
 import { modalStyle } from '../theme';
 import { ArrowLeft } from '@mui/icons-material';
 import { reels } from '../data/creative';
+import LazyImages from './Photography/LazyImages';
 
 const ReelModal = ({ reel, index }) => {
 
@@ -14,7 +15,10 @@ const ReelModal = ({ reel, index }) => {
 
   return (
     <Box display={'flex'} flexDirection={'column'}>
-      <img src={`${reel.coverImg}`} onClick={handleOpen} style={{ cursor: 'pointer' }} />
+      <Box onClick={handleOpen} style={{ cursor: 'pointer' }} height={'600px'} width={'400px'}>
+        <LazyImages src={`${reel.coverImg}`} sizeImg={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+      </Box>
+
       <Button onClick={handleOpen}>{reel.title}</Button>
 
 
