@@ -32,15 +32,15 @@ export const codingProjectsContainer = theme => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
   height: '80vh',
-  width: '90vw',
+  width: '70vw',
   overflow: 'scroll',
   gap: '10px',
   padding: '5px',
   [theme.breakpoints.down('md')]: {
-    gridTemplateColumns: 'repeat(2, 1fr)',
+    gridTemplateColumns: 'repeat(2, minmax(350px, 1fr)',
   },
   [theme.breakpoints.down('sm')]: {
-    gridTemplateColumns: 'repeat(1, 1fr)',
+    gridTemplateColumns: 'repeat(1,minmax(350px, 1fr))',
   },
 });
 
@@ -112,5 +112,4 @@ export const photoCard = {
   justifyContent: 'center',
   height: '400px',
   width: '400px',
-
 }

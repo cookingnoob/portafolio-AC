@@ -25,7 +25,6 @@ const Photography = ({ photo, index }) => {
         <Button onClick={handleOpen}>{photo.title}</Button>
       </Box>
 
-
       <Modal
         open={open}
         onClose={handleClose}
@@ -33,7 +32,7 @@ const Photography = ({ photo, index }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={modalStylePhoto}>
-          <PhotoCarousel index={0} />
+          <PhotoCarousel index={index} />
         </Box>
       </Modal>
     </Box>
