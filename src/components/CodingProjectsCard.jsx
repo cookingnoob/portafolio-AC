@@ -21,7 +21,7 @@ const CodingProjectsCard = ({ projects, setProjects }) => {
 
         {projects.map((p, index) => (
           //individual card
-          <Box key={`${p}-${index}`} sx={codingProjectCard} >
+          <Box key={`${p}-${index}`} sx={codingProjectCard(theme)} >
 
             <Typography color={'primary.dark'}>{p.title}</Typography>
             {/* technology stack buttons */}

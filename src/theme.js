@@ -20,27 +20,35 @@ export const theme = createTheme({
 
 })
 
-export const codingProjectCard = {
+export const codingProjectCard = (theme) => ({
   display: 'flex',
   flexDirection: 'column',
-  backgroundColor: 'primary.main',
+  backgroundColor: theme.palette.primary.main,
   height: '300px',
   padding: '5px',
-};
 
-export const codingProjectsContainer = theme => ({
+  [theme.breakpoints.down('sm')]: {
+
+    height: 'auto',
+    padding: '10px',
+  },
+});
+
+export const codingProjectsContainer = (theme) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
   height: '80vh',
   width: '70vw',
-  overflow: 'scroll',
+  overflowY: 'scroll',
   gap: '10px',
   padding: '5px',
   [theme.breakpoints.down('md')]: {
-    gridTemplateColumns: 'repeat(2, minmax(350px, 1fr)',
+    gridTemplateColumns: 'repeat(2, minmax(200px, 1fr))',
+    width: '90vw'
   },
   [theme.breakpoints.down('sm')]: {
-    gridTemplateColumns: 'repeat(1,minmax(350px, 1fr))',
+    gridTemplateColumns: 'repeat(1,minmax(200px, 1fr))',
+    width: '90vw',
   },
 });
 
