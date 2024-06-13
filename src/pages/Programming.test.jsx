@@ -6,12 +6,11 @@ import Programming from "./Programming";
 
 describe('renders elements', () => {
   it.todo('renders skills', () => {
-    //quiero una lista de mis proyectos
+
     render(
       <MemoryRouter>
         <Programming />
       </MemoryRouter>
     )
-
   })
 })

@@ -30,16 +30,16 @@ const PhotoCarousel = ({ index }) => {
 
   return (
     <>
-      <Button onClick={handleLeft} >
-        <ArrowLeft />
+      <Button  >
+        <ArrowLeft fontSize='large' onClick={handleLeft} />
       </Button>
-      <Box height={'80vh'} width={'90vw'} >
+      <Box height={'100vh'} width={'100vw'} >
         <Suspense fallback={<CircularProgress />}>
           <LazyImages src={`${creativeProjects[indexNum].imageUrl}`} sizeImg={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </Suspense>
       </Box>
       <Button>
-        <ArrowRight onClick={handleRight} />
+        <ArrowRight fontSize='large' onClick={handleRight} />
       </Button>
     </>
 

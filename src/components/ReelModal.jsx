@@ -17,6 +17,7 @@ const ReelModal = ({ reel, index }) => {
       <img src={`${reel.coverImg}`} onClick={handleOpen} style={{ cursor: 'pointer' }} />
       <Button onClick={handleOpen}>{reel.title}</Button>
 
+
       <Modal
         open={open}
         onClose={handleClose}
@@ -26,8 +27,8 @@ const ReelModal = ({ reel, index }) => {
         <Box sx={modalStyle} display={'flex'} alignItems={'center'} justifyContent={'center'} height={'600px'}>
           <TikTokEmbed url={reel.reelUrl} width={325} height={'600px'} />
         </Box>
-
       </Modal>
+
     </Box>
   )
 }

@@ -50,7 +50,7 @@ export const modalStyle = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: 'background.paper',
+  bgcolor: 'blue',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
@@ -98,11 +98,15 @@ export const modalStylePhoto = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 900,
-  bgcolor: 'background.paper',
+  bgcolor: 'rgba(36, 36, 36, 0.5)',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  width: '80vw',
+  height: '100vh',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
 };
 
 export const photoCard = {
