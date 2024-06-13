@@ -1,4 +1,4 @@
-import { Box, Button, Modal, Typography } from '@mui/material'
+import { Box, Button, CircularProgress, Modal, Typography } from '@mui/material'
 import React, { Suspense, lazy, useState } from 'react'
 import PhotoCarousel from './PhotoCarousel';
 import { modalStylePhoto, photoCard } from '../../theme';
@@ -16,12 +16,13 @@ const Photography = ({ photo, index }) => {
   return (
     <Box>
       <Box style={{ cursor: 'pointer' }} onClick={handleOpen} sx={photoCard}>
-        <Box height={'350px'} width={'350px'}>
 
-          <Suspense fallback={<h1>Loading...</h1>}>
+        <Box height={'350px'} width={'350px'}>
+          <Suspense fallback={<CircularProgress />}>
             <LazyImages src={`${photo.imageUrl}`} sizeImg={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </Suspense>
         </Box>
+
         <Button onClick={handleOpen}>{photo.title}</Button>
       </Box>
 

@@ -6,9 +6,11 @@ import { Circle } from '@mui/icons-material'
 const CV = () => {
   const [content, setContent] = useState(null)
   return (
-    <Box display={'flex'} >
-      <Button onClick={() => setContent('job')}>Job Experience</Button>
-      <Button onClick={() => setContent('education')}>Education</Button>
+    <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+      <Box width={'100vw'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+        <Button onClick={() => setContent('job')}>Job Experience</Button>
+        <Button onClick={() => setContent('education')}>Education</Button>
+      </Box>
       {content === 'job' ?
         <Box >
           <Typography color={'primary'}>Professional Experience: </Typography>
