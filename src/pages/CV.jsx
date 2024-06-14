@@ -4,7 +4,7 @@ import { Box, Button, List, ListItem, Typography } from '@mui/material'
 import { Circle } from '@mui/icons-material'
 
 const CV = () => {
-  const [content, setContent] = useState(null)
+  const [content, setContent] = useState('job')
   return (
     <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
       <Box width={'100vw'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
