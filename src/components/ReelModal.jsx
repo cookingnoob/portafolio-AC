@@ -1,7 +1,7 @@
 import { Box, Button, CircularProgress, Modal, Typography } from '@mui/material'
 import React, { Suspense, lazy, useState } from 'react'
 import { TikTokEmbed } from 'react-social-media-embed';
-import { modalStyle } from '../theme';
+import { modalStyle, reelImage, theme } from '../theme';
 import { ArrowLeft } from '@mui/icons-material';
 import { reels } from '../data/creative';
 const LazyImages = lazy(() => import('./Photography/LazyImages'));
@@ -15,8 +15,8 @@ const ReelModal = ({ reel, index }) => {
 
 
   return (
-    <Box display={'flex'} flexDirection={'column'}>
-      <Box onClick={handleOpen} style={{ cursor: 'pointer' }} height={'600px'} width={'400px'}>
+    <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+      <Box onClick={handleOpen} style={{ cursor: 'pointer' }} sx={reelImage}>
         <Suspense fallback={<CircularProgress sx={{ margin: 'auto' }} />}>
           <LazyImages src={`${reel.coverImg}`} sizeImg={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </Suspense>

@@ -59,50 +59,6 @@ export const navBarLinks = (theme) => ({
   },
 })
 
-export const codingProjectCard = (theme) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  backgroundColor: theme.palette.primary.main,
-  height: '300px',
-  padding: '5px',
-
-  [theme.breakpoints.down('sm')]: {
-
-    height: 'auto',
-    padding: '10px',
-  },
-});
-
-export const codingProjectsContainer = (theme) => ({
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3, minmax(200px, 1fr))',
-  height: '80vh',
-  width: '100vw',
-  overflowY: 'scroll',
-  gap: '10px',
-  padding: '5px',
-  [theme.breakpoints.down('md')]: {
-    gridTemplateColumns: 'repeat(2, minmax(200px, 1fr))',
-    width: '90vw'
-  },
-  [theme.breakpoints.down('sm')]: {
-    gridTemplateColumns: 'repeat(1,minmax(200px, 1fr))',
-    width: '90vw',
-  },
-});
-
-export const modalStyle = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
-
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
 color: #F1F1F1;
@@ -141,6 +97,51 @@ overflow: hidden;
 }
 `;
 
+export const codingProjectCard = (theme) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  backgroundColor: theme.palette.primary.main,
+  height: '300px',
+  padding: '5px',
+
+  [theme.breakpoints.down('sm')]: {
+
+    height: 'auto',
+    padding: '10px',
+  },
+});
+
+export const codingProjectsContainer = (theme) => ({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, minmax(200px, 1fr))',
+  height: '80vh',
+  width: '100vw',
+  overflowY: 'scroll',
+  gap: '10px',
+  padding: '5px',
+  [theme.breakpoints.down('md')]: {
+    gridTemplateColumns: 'repeat(2, minmax(200px, 1fr))',
+    width: '90vw'
+  },
+  [theme.breakpoints.down('sm')]: {
+    gridTemplateColumns: 'repeat(1,minmax(200px, 1fr))',
+    width: '90vw',
+  },
+});
+
+export const modalStyle = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+
+};
+
+
 export const modalStylePhoto = {
   position: 'absolute',
   top: '50%',
@@ -154,7 +155,12 @@ export const modalStylePhoto = {
   height: '100vh',
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+
+  [theme.breakpoints.down('sm')]: {
+    width: '400px',
+    height: '500px'
+  },
 };
 
 export const photoCard = {
@@ -165,6 +171,16 @@ export const photoCard = {
   height: '400px',
   width: '400px',
 }
+
+export const reelImage = {
+  height: '600px',
+  width: '400px',
+  // [theme.breakpoints.down('sm')]: {
+
+  //   height: '500px'
+  // },
+};
+
 export const aboutContainer = (theme) => ({
   display: 'flex',
   flexDirection: 'row',
