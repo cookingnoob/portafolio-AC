@@ -55,7 +55,7 @@ export const navBarLinks = (theme) => ({
 
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '20px',
+    fontSize: '15px',
   },
 })
 
@@ -138,7 +138,11 @@ export const modalStyle = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
-
+  bgcolor: 'rgba(241, 241, 241, .5)',
+  [theme.breakpoints.down('sm')]: {
+    height: '80vh',
+    width: '80vw'
+  },
 };
 
 
@@ -147,19 +151,18 @@ export const modalStylePhoto = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  bgcolor: 'rgba(36, 36, 36, 0.5)',
+  bgcolor: 'rgba(241, 241, 241, .5)',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
   width: '80vw',
-  height: '100vh',
+  height: '90vh',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
 
   [theme.breakpoints.down('sm')]: {
-    width: '400px',
-    height: '500px'
+    display: 'none',
   },
 };
 
@@ -211,6 +214,10 @@ export const aboutTextContainer = (theme) => ({
 export const aboutTextBox = () => ({
   display: 'flex',
   width: '60vw',
+  [theme.breakpoints.down('md')]: {
+
+    width: '90vw',
+  },
 });
 
 export const aboutText = (theme) => ({
