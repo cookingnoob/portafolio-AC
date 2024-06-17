@@ -14,7 +14,7 @@ const Photography = ({ photo, index }) => {
 
 
   return (
-    <Box>
+    <Box display={'flex'}>
       <Box style={{ cursor: 'pointer' }} onClick={handleOpen} sx={photoCard}>
 
         <Box height={'300px'} width={'300px'}>

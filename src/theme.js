@@ -20,6 +20,45 @@ export const theme = createTheme({
 
 })
 
+export const welcomeContainer = (theme) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100vw',
+});
+
+export const welcomeTypography = (theme) => ({
+  fontSize: '30px',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '24px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '20px',
+    marginLeft: '10px',
+    marginTop: '60%'
+  },
+});
+
+export const welcomeNavLink = (theme) => ({
+  fontSize: '100px',
+  marginLeft: '10px',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '80px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '40px',
+  },
+});
+
+export const navBarLinks = (theme) => ({
+  fontSize: '12px',
+  [theme.breakpoints.down('md')]: {
+
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '20px',
+  },
+})
+
 export const codingProjectCard = (theme) => ({
   display: 'flex',
   flexDirection: 'column',
@@ -101,8 +140,6 @@ overflow: hidden;
   left: 100%;
 }
 `;
-
-
 
 export const modalStylePhoto = {
   position: 'absolute',
@@ -209,29 +246,3 @@ export const aboutImageContainer = (theme) => ({
   },
 });
 
-export const welcomeContainer = (theme) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  width: '100vw',
-  height: '80vh',
-});
-
-export const welcomeTypography = (theme) => ({
-  fontSize: '30px',
-  [theme.breakpoints.down('md')]: {
-    fontSize: '24px',
-  },
-  [theme.breakpoints.down('sm')]: {
-    fontSize: '20px',
-  },
-});
-
-export const welcomeNavLink = (theme) => ({
-  fontSize: '100px',
-  [theme.breakpoints.down('md')]: {
-    fontSize: '80px',
-  },
-  [theme.breakpoints.down('sm')]: {
-    fontSize: '40px',
-  },
-});
