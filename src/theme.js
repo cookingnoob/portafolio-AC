@@ -184,12 +184,14 @@ export const reelImage = {
   // },
 };
 
+
 export const aboutContainer = (theme) => ({
   display: 'flex',
   flexDirection: 'row',
   backgroundColor: theme.palette.primary.dark,
   color: theme.palette.primary.main,
   padding: '20px',
+  minHeight: '100vh',
 
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
@@ -215,7 +217,6 @@ export const aboutTextBox = () => ({
   display: 'flex',
   width: '60vw',
   [theme.breakpoints.down('md')]: {
-
     width: '90vw',
   },
 });
@@ -234,7 +235,6 @@ export const aboutText = (theme) => ({
 export const aboutButton = (theme) => ({
   color: theme.palette.primary.main,
 });
-
 
 export const aboutImageContainer = (theme) => ({
   display: 'flex',
@@ -268,4 +268,3 @@ export const aboutImageContainer = (theme) => ({
     },
   },
 });
-
