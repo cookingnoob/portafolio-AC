@@ -1,7 +1,4 @@
 import { Box, Typography, useTheme } from '@mui/material';
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import CodingProjectsCard from '../components/CodingProjectsCard';
 import { StyledNavLink, StyledTypography } from '../theme';
 import { welcomeContainer, welcomeTypography, welcomeNavLink } from '../theme';
 

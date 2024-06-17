@@ -66,40 +66,43 @@ export const modalStyle = {
 
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
-  color: #F1F1F1;
-  &:hover {
-    animation: colorChange 1s forwards;
+color: #F1F1F1;
+&:hover {
+  animation: colorChange 1s forwards;
+}
+@keyframes colorChange {
+  from {
+    color: #F1F1F1;
   }
-  @keyframes colorChange {
-    from {
-      color: #F1F1F1;
-    }
-    to {
-      color: #DD4040; /* Cambia este color por el que desees */
-    }
+  to {
+    color: #DD4040; 
   }
+}
 `;
+
+
 
 export const StyledTypography = styled(Typography)`
-
-  color: inherit;
-  position: relative;
-  overflow: hidden;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, #F1F1F1 50%, #DD4040 50%);
-    z-index: -1;
-    transition: all 0.5s;
-  }
-  &:hover::after {
-    left: 100%;
-  }
+color: inherit;
+position: relative;
+overflow: hidden;
+&::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #F1F1F1 50%, #DD4040 50%);
+  z-index: -1;
+  transition: all 0.5s;
+}
+&:hover::after {
+  left: 100%;
+}
 `;
+
+
 
 export const modalStylePhoto = {
   position: 'absolute',
@@ -211,10 +214,6 @@ export const welcomeContainer = (theme) => ({
   flexDirection: 'column',
   width: '100vw',
   height: '80vh',
-  padding: '20px',
-  [theme.breakpoints.down('md')]: {
-    padding: '10px',
-  },
 });
 
 export const welcomeTypography = (theme) => ({
