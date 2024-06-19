@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Menu, MenuItem, MenuList, Typography } from '@mui/material'
 import { MenuOpen } from '@mui/icons-material'
 import { StyledNavLink, StyledTypography, navBarLinks, theme } from '../theme'
+import CoolNavLink from './Photography/CoolNavLink'
 
 const DropDownLinks = () => {
-
   const [anchorEl, setAnchorEl] = useState(null)
   const open = Boolean(anchorEl)
 
@@ -16,7 +16,7 @@ const DropDownLinks = () => {
     setAnchorEl(null)
   }
   return (
-    <div>
+    <>
 
       <Typography
         aria-controls={open ? 'mobile-menu' : undefined}
@@ -43,34 +43,25 @@ const DropDownLinks = () => {
         }}
       >
         <MenuList>
-          <MenuItem onClick={handleClose}>
-            <StyledNavLink to={'/home'}>
-              <StyledTypography sx={navBarLinks(theme)}>Home</StyledTypography>
-            </StyledNavLink>
+          <MenuItem>
+            <CoolNavLink url={'/home'} name={'Home'} styleType={navBarLinks(theme)} />
           </MenuItem>
           <MenuItem>
-            <StyledNavLink to={'/programming'}>
-              <StyledTypography sx={navBarLinks(theme)}>Programming</StyledTypography>
-            </StyledNavLink>
+            <CoolNavLink url={'/programming'} name={'Programming'} styleType={navBarLinks(theme)} />
           </MenuItem>
           <MenuItem>
-            <StyledNavLink to={'/creative'}>
-              <StyledTypography sx={navBarLinks(theme)}>Creative</StyledTypography>
-            </StyledNavLink>
+            <CoolNavLink url={'/creative'} name={'Creative'} styleType={navBarLinks(theme)} />
           </MenuItem>
           <MenuItem>
-            <StyledNavLink to={'/about'}>
-              <StyledTypography sx={navBarLinks(theme)}>About</StyledTypography>
-            </StyledNavLink>
+            <CoolNavLink url={'/about'} name={'About'} styleType={navBarLinks(theme)} />
           </MenuItem>
           <MenuItem>
-            <StyledNavLink to={'/cv'}>
-              <StyledTypography sx={navBarLinks(theme)}>CV</StyledTypography>
-            </StyledNavLink>
+            <CoolNavLink url={'/cv'} name={'CV'} styleType={navBarLinks(theme)} />
           </MenuItem>
+
         </MenuList>
       </Menu>
-    </div>
+    </>
   )
 }
 
