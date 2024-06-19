@@ -1,6 +1,6 @@
 import { Box, Typography, useTheme } from '@mui/material';
-import { StyledNavLink, StyledTypography } from '../theme';
 import { welcomeContainer, welcomeTypography, welcomeNavLink } from '../theme';
+import CoolNavLink from '../components/Photography/CoolNavLink';
 
 const Welcome = () => {
   const theme = useTheme();
@@ -8,22 +8,10 @@ const Welcome = () => {
   return (
     <Box sx={welcomeContainer(theme)}>
       <Typography variant='h5' color={'primary'} sx={welcomeTypography(theme)}>Alan Coste</Typography>
-
-      <StyledNavLink to={'/programming'} >
-        <StyledTypography variant='h1' sx={welcomeNavLink(theme)}>PROGRAMMING</StyledTypography>
-      </StyledNavLink>
-
-      <StyledNavLink to='/creative'>
-        <StyledTypography variant='h1' sx={welcomeNavLink(theme)}>CREATIVE</StyledTypography>
-      </StyledNavLink>
-
-      <StyledNavLink to='/about'>
-        <StyledTypography variant='h1' sx={welcomeNavLink(theme)}>ABOUT</StyledTypography>
-      </StyledNavLink>
-
-      <StyledNavLink to={'/cv'}>
-        <StyledTypography variant='h1' sx={welcomeNavLink(theme)}>CV</StyledTypography>
-      </StyledNavLink>
+      <CoolNavLink url={'/programming'} name={'PROGRAMMING'} styleType={welcomeNavLink(theme)} />
+      <CoolNavLink url={'/creative'} name={'CREATIVE'} styleType={welcomeNavLink(theme)} />
+      <CoolNavLink url={'/about'} name={'ABOUT'} styleType={welcomeNavLink(theme)} />
+      <CoolNavLink url={'/cv'} name={'CV'} styleType={welcomeNavLink(theme)} />
     </Box>
   );
 }
