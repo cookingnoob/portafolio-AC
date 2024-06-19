@@ -19,29 +19,18 @@ const BarNavLinks = () => {
             <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'flex-end'}>
               <MenuItem>
                 <CoolNavLink url={'/home'} name={'Home'} styleType={navBarLinks(theme)} />
-                {/* <StyledNavLink to={'/home'}>
-                  <StyledTypography sx={navBarLinks(theme)}>Home</StyledTypography>
-                </StyledNavLink> */}
               </MenuItem>
               <MenuItem>
-                <StyledNavLink to={'/programming'}>
-                  <StyledTypography sx={navBarLinks(theme)}>Programming</StyledTypography>
-                </StyledNavLink>
+                <CoolNavLink url={'/programming'} name={'Programming'} styleType={navBarLinks(theme)} />
               </MenuItem>
               <MenuItem>
-                <StyledNavLink to={'/creative'}>
-                  <StyledTypography sx={navBarLinks(theme)}>Creative</StyledTypography>
-                </StyledNavLink>
+                <CoolNavLink url={'/creative'} name={'Creative'} styleType={navBarLinks(theme)} />
               </MenuItem>
               <MenuItem>
-                <StyledNavLink to={'/about'}>
-                  <StyledTypography sx={navBarLinks(theme)}>About</StyledTypography>
-                </StyledNavLink>
+                <CoolNavLink url={'/about'} name={'About'} styleType={navBarLinks(theme)} />
               </MenuItem>
               <MenuItem>
-                <StyledNavLink to={'/cv'}>
-                  <StyledTypography sx={navBarLinks(theme)}>CV</StyledTypography>
-                </StyledNavLink>
+                <CoolNavLink url={'/cv'} name={'CV'} styleType={navBarLinks(theme)} />
               </MenuItem>
             </Box>
           </MenuList>
