@@ -51,14 +51,12 @@ export const welcomeNavLink = (theme) => ({
 
 export const navBarLinks = (theme) => ({
   fontSize: '12px',
-  [theme.breakpoints.down('md')]: {
-
-  },
+  [theme.breakpoints.down('md')]: {},
   [theme.breakpoints.down('sm')]: {
+    color: '#242424',
     fontSize: '15px',
   },
-})
-
+});
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
 color: #F1F1F1;
@@ -178,10 +176,7 @@ export const photoCard = {
 export const reelImage = {
   height: '600px',
   width: '400px',
-  // [theme.breakpoints.down('sm')]: {
 
-  //   height: '500px'
-  // },
 };
 
 
@@ -190,12 +185,11 @@ export const aboutContainer = (theme) => ({
   flexDirection: 'row',
   backgroundColor: theme.palette.primary.dark,
   color: theme.palette.primary.main,
-  padding: '20px',
   minHeight: '100vh',
 
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
-    padding: '10px',
+
   },
 });
 
@@ -208,7 +202,6 @@ export const aboutTextContainer = (theme) => ({
   gap: '10px',
   [theme.breakpoints.down('md')]: {
     marginLeft: '0',
-    marginBottom: '20px',
     width: '100%',
   },
 });

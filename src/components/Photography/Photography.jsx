@@ -1,14 +1,12 @@
-import { Box, Button, CircularProgress, Modal, Typography } from '@mui/material'
+import { Box, Button, CircularProgress, Modal, Typography, useMediaQuery } from '@mui/material'
 import React, { Suspense, lazy, useState } from 'react'
 import PhotoCarousel from './PhotoCarousel';
-import { modalStylePhoto, photoCard } from '../../theme';
-
-
-
+import { modalStylePhoto, photoCard, theme } from '../../theme';
 const LazyImages = lazy(() => import('./LazyImages'));
 
 const Photography = ({ photo, index }) => {
   const [open, setOpen] = useState(false);
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -25,17 +23,18 @@ const Photography = ({ photo, index }) => {
 
         <Button onClick={handleOpen}>{photo.title}</Button>
       </Box>
-
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={modalStylePhoto}>
-          <PhotoCarousel index={index} />
-        </Box>
-      </Modal>
+      {!isMobile && (
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={modalStylePhoto}>
+            <PhotoCarousel index={index} />
+          </Box>
+        </Modal>
+      )}
     </Box>
   )
 }
