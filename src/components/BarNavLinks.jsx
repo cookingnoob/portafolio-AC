@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { StyledNavLink, StyledTypography, navBarLinks, theme } from '../theme'
 import { MenuOpen } from '@mui/icons-material'
 import DropDownLinks from './DropDownLinks'
+import CoolNavLink from './Photography/CoolNavLink'
 
 const BarNavLinks = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
@@ -17,9 +18,10 @@ const BarNavLinks = () => {
           <MenuList >
             <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'flex-end'}>
               <MenuItem>
-                <StyledNavLink to={'/home'}>
+                <CoolNavLink url={'/home'} name={'Home'} styleType={navBarLinks(theme)} />
+                {/* <StyledNavLink to={'/home'}>
                   <StyledTypography sx={navBarLinks(theme)}>Home</StyledTypography>
-                </StyledNavLink>
+                </StyledNavLink> */}
               </MenuItem>
               <MenuItem>
                 <StyledNavLink to={'/programming'}>
