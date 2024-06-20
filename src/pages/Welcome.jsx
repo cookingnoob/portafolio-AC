@@ -1,6 +1,6 @@
 import { Box, Typography, useTheme } from '@mui/material';
 import { welcomeContainer, welcomeTypography, welcomeNavLink } from '../theme';
-import CoolNavLink from '../components/Photography/CoolNavLink';
+import CoolNavLink from '../components/CoolNavLink';
 
 const Welcome = () => {
   const theme = useTheme();

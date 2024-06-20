@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Menu, MenuItem, MenuList, Typography } from '@mui/material'
-import { MenuOpen } from '@mui/icons-material'
-import { StyledNavLink, StyledTypography, navBarLinks, theme } from '../theme'
-import CoolNavLink from './Photography/CoolNavLink'
+import { MenuOpen, MenuRounded } from '@mui/icons-material'
+import { navBarLinks, theme } from '../theme'
+import CoolNavLink from './CoolNavLink'
+
 
 const DropDownLinks = () => {
   const [anchorEl, setAnchorEl] = useState(null)
+  const [isClicked, setIsClicked] = useState(false)
   const open = Boolean(anchorEl)
 
-  const handleClick = (event) => {
+  const handleOpen = (event) => {
+    setIsClicked(true)
     setAnchorEl(event.currentTarget)
   }
 
   const handleClose = () => {
+    setIsClicked(false)
     setAnchorEl(null)
   }
   return (
@@ -22,13 +26,14 @@ const DropDownLinks = () => {
         aria-controls={open ? 'mobile-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
+        onClick={handleOpen}
         sx={{ cursor: 'pointer' }}
         color={'primary'}
       >
-        <MenuOpen />
+        {isClicked ? <MenuOpen /> : <MenuRounded />}
       </Typography>
       <Menu
+        color='blue'
         id="mobile-menu"
         anchorEl={anchorEl}
         open={open}
@@ -40,6 +45,11 @@ const DropDownLinks = () => {
         transformOrigin={{
           vertical: 'top',
           horizontal: 'left',
+        }}
+        sx={{
+          '& .MuiPaper-root': {
+            backgroundColor: theme.palette.primary.dark,
+          },
         }}
       >
         <MenuList>

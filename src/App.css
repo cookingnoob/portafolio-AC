@@ -26,3 +26,8 @@ a:hover{
   color: rgba(241, 241, 241, 1);
 } */
 
+
+.navLink{
+  text-decoration: none;
+  color: #F1F1F1;
+}

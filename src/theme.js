@@ -53,7 +53,7 @@ export const navBarLinks = (theme) => ({
   fontSize: '12px',
   [theme.breakpoints.down('md')]: {},
   [theme.breakpoints.down('sm')]: {
-    color: '#242424',
+    color: '#F1F1F1',
     fontSize: '15px',
   },
 });
@@ -101,9 +101,7 @@ export const codingProjectCard = (theme) => ({
   backgroundColor: theme.palette.primary.main,
   height: '300px',
   padding: '5px',
-
   [theme.breakpoints.down('sm')]: {
-
     height: 'auto',
     padding: '10px',
   },
@@ -112,7 +110,7 @@ export const codingProjectCard = (theme) => ({
 export const codingProjectsContainer = (theme) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(3, minmax(200px, 1fr))',
-  height: '80vh',
+  height: '90vh',
   width: '100vw',
   overflowY: 'scroll',
   gap: '10px',
@@ -185,11 +183,10 @@ export const aboutContainer = (theme) => ({
   flexDirection: 'row',
   backgroundColor: theme.palette.primary.dark,
   color: theme.palette.primary.main,
-  minHeight: '100vh',
+
 
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
-
   },
 });
 

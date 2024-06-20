@@ -12,6 +12,7 @@ const Photography = ({ photo, index }) => {
 
 
   return (
+
     <Box display={'flex'}>
       <Box style={{ cursor: 'pointer' }} onClick={handleOpen} sx={photoCard}>
 
@@ -23,6 +24,7 @@ const Photography = ({ photo, index }) => {
 
         <Button onClick={handleOpen}>{photo.title}</Button>
       </Box>
+
       {!isMobile && (
         <Modal
           open={open}
