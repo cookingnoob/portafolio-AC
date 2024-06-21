@@ -8,7 +8,7 @@ const CVCards = ({ title, date, descriptions, institution }) => {
         <Box display={'flex'} flexDirection={'column'}>
           <Typography color={'primary'}>{title}</Typography>
           {institution && (
-            <Typography color="primary">{institution}</Typography>
+            <Typography color="secondary">{institution}</Typography>
           )}
         </Box>
         <Typography color={'primary'}>{date}</Typography>

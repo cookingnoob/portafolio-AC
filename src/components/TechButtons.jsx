@@ -11,7 +11,7 @@ const TechButtons = ({ project, setProjects }) => {
       {project.tech.map((t, index) => (
         <Button size='small' key={`${t}-${index}`} variant='outlined' onClick={() => handleFilter(t)}>
           <br />
-          <Typography color={'primary.dark'} fontSize={'10px'}>{t}</Typography>
+          <Typography color={'primary'} fontSize={'10px'}>{t}</Typography>
         </Button>
       ))}
     </Box>

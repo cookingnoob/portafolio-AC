@@ -23,7 +23,7 @@ const CodingProjectsCard = ({ projects, setProjects }) => {
           //individual card
           <Box key={`${p}-${index}`} sx={codingProjectCard(theme)} >
 
-            <Typography color={'primary.dark'}>{p.title}</Typography>
+            <Typography color={'primary'}>{p.title}</Typography>
             {/* technology stack buttons */}
 
             <TechButtons project={p} setProjects={setProjects} />
@@ -31,18 +31,17 @@ const CodingProjectsCard = ({ projects, setProjects }) => {
             <br />
             {/* project description */}
             <Box height={'100px'}>
-              <Typography variant='parragraph' color={'primary.dark'} fontSize={'12px'}>{p.description}</Typography>
+              <Typography variant='parragraph' color={'primary'} fontSize={'12px'}>{p.description}</Typography>
             </Box>
             {/* project site  */}
             <Microlink url={p.projectUrl} lazy={{ threshold: 1 }} fetchData />
             {/* github repo */}
-            <Box display={'flex'} >
-              <Typography color={'primary.dark'}>Repo:</Typography>
+            <Box display={'flex'} marginTop={'5px'}>
+              <Typography color={'primary'}>Repo:</Typography>
               <Link href={`${p.repository}`}>
                 <img width={'40px'} height={'40px'} src='https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png' />
               </Link>
             </Box>
-
           </Box>
         ))}
       </Box>

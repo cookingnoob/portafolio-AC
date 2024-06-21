@@ -57,6 +57,7 @@ export const navBarLinks = (theme) => ({
     fontSize: '15px',
   },
 });
+
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
 color: #F1F1F1;
@@ -72,8 +73,6 @@ color: #F1F1F1;
   }
 }
 `;
-
-
 
 export const StyledTypography = styled(Typography)`
 color: inherit;
@@ -98,7 +97,7 @@ overflow: hidden;
 export const codingProjectCard = (theme) => ({
   display: 'flex',
   flexDirection: 'column',
-  backgroundColor: theme.palette.primary.main,
+
   height: '300px',
   padding: '5px',
   [theme.breakpoints.down('sm')]: {
