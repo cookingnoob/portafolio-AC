@@ -5,15 +5,15 @@ import { Circle } from '@mui/icons-material'
 import CVCards from '../components/CVCards'
 
 const CV = () => {
-  const [content, setContent] = useState('job')
+  const [content, setContent] = useState(false)
   return (
 
-    <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+    <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} bgcolor={'primary.dark'}>
       <Box width={'100vw'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-        <Button onClick={() => setContent('job')}>Job Experience</Button>
-        <Button onClick={() => setContent('education')}>Education</Button>
+        <Button onClick={() => setContent(false)}>Job Experience</Button>
+        <Button onClick={() => setContent(true)}>Education</Button>
       </Box>
-      {content === 'job' ?
+      {content === false ?
         <Box >
           <Typography color={'primary'}>Professional Experience: </Typography>
           {jobExperience.map((j, i) => (
@@ -23,7 +23,7 @@ const CV = () => {
         </Box>
         : <></>}
 
-      {content === 'education' ?
+      {content === true ?
         <Box>
           <Typography color={'primary'}>Education: </Typography>
           {education.map((e, i) => (
@@ -33,7 +33,6 @@ const CV = () => {
         :
         <></>
       }
-
     </Box>
   )
 }

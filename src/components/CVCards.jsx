@@ -3,7 +3,7 @@ import React from 'react'
 
 const CVCards = ({ title, date, descriptions, institution }) => {
   return (
-    <Box width={'80vw'} padding={'10px'} >
+    <Box width={'80vw'} bgcolor={'primary.dark'}>
       <Box display={'flex'} justifyContent={'space-between'}>
         <Box display={'flex'} flexDirection={'column'}>
           <Typography color={'primary'}>{title}</Typography>
