@@ -1,25 +1,25 @@
 export const education = [
   {
     title: 'Fullstack MERN developer',
-    description: 'Learned web development by coding projects with technologies such as HTML, CSS, Javascript, React, Nodejs, Express and MongoDB. Worked with Git, Github. Tests with Jest, Vitest and React-Testing-Library',
+    description: ['Learned web development by coding projects with technologies such as HTML, CSS, Javascript, React, Nodejs, Express and MongoDB. Worked with Git, Github. Tests with Jest, Vitest and React-Testing-Library'],
     institution: 'Rock{the}Code',
     time: '2023-2024'
   },
   {
     title: 'Communications B.A',
-    description: 'Bachelors degree where I was in touch with journalism, film making, marketing, critical thinking',
+    description: ['Bachelors degree where I was in touch with journalism, film making, marketing, critical thinking'],
     institution: 'Universidad Iberoamericana',
     time: '2013-2018'
   },
   {
     title: 'Media and Global Change: Voices Against Extremism and Populism',
-    description: 'A panel of experts and students from all around the world discuss of the impact of fake news with new technologies and the rise of populism in a post-truth society.',
+    description: ['A panel of experts and students from all around the world discuss of the impact of fake news with new technologies and the rise of populism in a post-truth society.'],
     institution: 'Salzburg Global Seminar',
     time: '2017'
   },
   {
     title: 'Powermba',
-    description: 'Online program focused on explaining deeply each part of Business Model Canva, the creation of a value proposition and gather data to check if there is customer-market-fit.',
+    description: ['Online program focused on explaining deeply each part of Business Model Canva, the creation of a value proposition and gather data to check if there is customer-market-fit.'],
     institution: 'thepowerbusinessschool',
     time: '2020-2021'
   },

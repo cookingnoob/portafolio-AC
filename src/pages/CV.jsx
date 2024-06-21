@@ -27,12 +27,7 @@ const CV = () => {
         <Box>
           <Typography color={'primary'}>Education: </Typography>
           {education.map((e, i) => (
-            <Box key={`${e}-${i}`} display={'flex'} flexDirection={'column'}>
-              <Typography color={'primary'} variant='h6' marginTop={'20px'}>{e.title}</Typography>
-              <Typography color={'primary'}>{e.institution}</Typography>
-              <Typography color={'primary'}>{e.time}</Typography>
-              <Typography color={'primary'}>{e.description}</Typography>
-            </Box>
+            <CVCards key={`${e}-${i}`} title={e.title} institution={e.institution} date={e.time} descriptions={e.description} />
           ))}
         </Box>
         :
